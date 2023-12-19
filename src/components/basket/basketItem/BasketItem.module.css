@@ -1,0 +1,22 @@
+.item{
+display: flex;
+align-items: center;
+}
+.cancelBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 20px;
+    color: #ff6d00;
+    cursor: pointer;
+}
+.quantityBtn{
+    padding: 8px 8px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+}

@@ -1,0 +1,17 @@
+.toastView{
+    position: fixed;
+    top: 120px;
+    right: 10px;
+    animation: toastAnimation 300ms linear;
+}
+
+@keyframes toastAnimation {
+    from{
+        top: 160px;
+        opacity: 0;
+    }
+    to{
+        top: 120px;
+        opacity: 1;
+    }
+}
