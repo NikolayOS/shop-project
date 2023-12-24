@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useContext} from "react";
+import { ShopContext } from "../../../context/context";
 import style from './GoodsCard.module.css'
 const GoodsCard = (props) => {
   const {
@@ -7,6 +8,7 @@ const GoodsCard = (props) => {
     description,
     price,
   } = props;
+  const {addToBasket} = useContext(ShopContext)
   return (
         <div className={`card ${style.card}`} id = {id}>
           <div className="card-image">
@@ -17,7 +19,7 @@ const GoodsCard = (props) => {
             <p>{description}</p>
           </div>
           <div className="card-action">
-          <button className="btn #ffc107 amber" style={{color: "black"}} onClick={() => props.addToBasket({id,title,price})}>Buy</button>
+          <button className="btn #ffc107 amber" style={{color: "black"}} onClick={() => addToBasket({id,title,price})}>Buy</button>
           <span className="right">{price}$</span>
           </div>
         </div>
